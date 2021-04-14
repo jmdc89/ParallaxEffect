@@ -21,16 +21,22 @@ const inlineStyle = {
 
 function App() {
   return (
-    <div className="App">
+    <div style={{ textAlign: "center" }}>
       <Parallax bgImage={image1} strength={500}>
         <div style={{ height: 500 }}>
           <div style={inlineStyle}>HTML inside the parallax</div>
         </div>
       </Parallax>
       <h1>| | |</h1>
-      <Parallax bgImage={image2} blur={{ min: -1, max: 5 }}>
+      <Parallax bgImage={image2} blur={{ min: 0, max: 5 }}>
         <div style={{ height: 500 }}>
           <div style={inlineStyle}>Dinamic blur</div>
+        </div>
+      </Parallax>
+      <h1>| | |</h1>
+      <Parallax bgImage={image3} strength={-200}>
+        <div style={{ height: 500 }}>
+          <div style={inlineStyle}>Reverse direction</div>
         </div>
       </Parallax>
       <div style={{ height: "100vh" }}></div>
