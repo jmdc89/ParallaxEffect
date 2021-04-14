@@ -11,8 +11,6 @@ function ParHooks() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  console.log(offsetY);
-
   const renderContent = () => (
     <>
       <div className="Parallax__content__heading">
@@ -39,11 +37,11 @@ function ParHooks() {
     <section className="Parallax">
       <div
         className="Parallax__background"
-        // style={{ transform: `translateY(-${offsetY * 0.5}px)` }}
+        style={{ transform: `translateY(-${offsetY * 0.5}px)` }}
       />
       <div
         className="Parallax__background-triangles"
-        // style={{ transform: `translateY(${offsetY * 0.8}px)` }}
+        style={{ transform: `translateY(${offsetY * 0.8}px)` }}
       />
       <div className="Parallax__content">{renderContent()}</div>
     </section>
