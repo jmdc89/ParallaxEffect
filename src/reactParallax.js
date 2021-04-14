@@ -19,7 +19,7 @@ const inlineStyle = {
   transform: "translate(-50%, -50%)",
 };
 
-function App() {
+function ReactParallax() {
   return (
     <div style={{ textAlign: "center" }}>
       <Parallax bgImage={image1} strength={500}>
@@ -67,4 +67,4 @@ function App() {
   );
 }
 
-export default App;
+export default ReactParallax;
