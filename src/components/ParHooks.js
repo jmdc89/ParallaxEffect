@@ -1,22 +1,18 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState, useEffect } from "react";
 import "../styles/ParHooks.scss";
 
-const ContentHeading = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 1080px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 1;
-  margin-top: 100px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-`;
-
 function ParHooks() {
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  console.log(offsetY);
+
   const renderContent = () => (
     <>
       <div className="Parallax__content__heading">
