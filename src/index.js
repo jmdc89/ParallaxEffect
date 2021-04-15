@@ -6,7 +6,7 @@ import ParHooks from "./components/ParHooks";
 ReactDOM.render(
   <React.StrictMode>
     {/* <ReactParallax /> */}
-    <ParHooks />
+    {/* <ParHooks /> */}
   </React.StrictMode>,
   document.getElementById("root")
 );
